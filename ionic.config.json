@@ -1,0 +1,7 @@
+{
+  "name": "metrocdmx",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

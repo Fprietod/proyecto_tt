@@ -1,0 +1,22 @@
+<ion-app>
+    <ion-header translucent>
+      <ion-toolbar>
+        <ion-title>Información Twitter</ion-title>
+      </ion-toolbar>
+    </ion-header>,
+    <ion-content fullscreen>
+      <ion-card>
+        <img src="./madison.jpg" />
+        <ion-card-header>
+        </ion-card-header>
+        <ion-card-content>
+          Esta es la última actualización del metro
+        Si deseas checar información en tiempo real, consulta twitter
+    </ion-card-content>
+      </ion-card>
+       <ion-item lines="full" (click)="openTwitter('MetroCDMX')">
+    <ion-icon name="logo-twitter" slot="start" color="secondary"></ion-icon>
+    Consulta Twitter
+  </ion-item>
+    </ion-content>
+  </ion-app>
