@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ChatsService, chat } from "../servicios/chats.service";
 
 @Component({
   selector: 'app-status-chat',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatusChatPage implements OnInit {
 
-  constructor() { }
+	 public chatRooms :any =[];
+  // 
+
+  constructor(public chatservice : ChatsService) { }
 
   ngOnInit() {
+   this.chatservice.getChatRooms().subscribe( chats => {
+      
+      this.chatRooms = chats;
+      
+    })
   }
 
 }

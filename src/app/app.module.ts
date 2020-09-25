@@ -13,19 +13,21 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import {firebaseConfig} from "../environments/environment";
 import {AngularFireModule} from "@angular/fire"
 import {AngularFireAuthModule} from "@angular/fire/auth"
+import { AngularFirestoreModule, FirestoreSettingsToken } from "@angular/fire/firestore";
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
   AngularFireModule.initializeApp(firebaseConfig),
-  AngularFireAuthModule],
+  AngularFireAuthModule,AngularFirestoreModule],
   providers: [
     StatusBar,
     SplashScreen,
     AppAvailability,
     InAppBrowser,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    {provide: FirestoreSettingsToken, useValue: {}}
   ],
   bootstrap: [AppComponent]
 })
