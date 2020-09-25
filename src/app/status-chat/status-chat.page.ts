@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ChatsService, chat } from "../servicios/chats.service";
+import { NavParams, ModalController } from "@ionic/angular";
+import { ChatComponent } from "../componentes/chat/chat.component";
 
 @Component({
   selector: 'app-status-chat',
@@ -11,7 +13,8 @@ export class StatusChatPage implements OnInit {
 	 public chatRooms :any =[];
   // 
 
-  constructor(public chatservice : ChatsService) { }
+  constructor(public chatservice : ChatsService,
+   private modal: ModalController) { }
 
   ngOnInit() {
    this.chatservice.getChatRooms().subscribe( chats => {
@@ -19,6 +22,16 @@ export class StatusChatPage implements OnInit {
       this.chatRooms = chats;
       
     })
+  }
+
+  openChat(chat){
+   this.modal.create({
+      component: ChatComponent,
+      componentProps : {
+        name: chat.name
+      }
+    }).then( (modal) => modal.present())
+
   }
 
 }
