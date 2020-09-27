@@ -22,6 +22,14 @@ const routes: Routes = [
     path: 'status-chat',
     loadChildren: () => import('./status-chat/status-chat.module').then( m => m.StatusChatPageModule)
   },
+  {
+    path: 'registro',
+    loadChildren: () => import('./componentes/registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  {
+    path: 'sin-registro',
+    loadChildren: () => import('./componentes/sin-registro/sin-registro.module').then( m => m.SinRegistroPageModule)
+  },
 
 ];
 
