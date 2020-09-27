@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'registro',
     loadChildren: () => import('./componentes/registro/registro.module').then( m => m.RegistroPageModule)
   },
+  {
+    path: 'sin-registro',
+    loadChildren: () => import('./componentes/sin-registro/sin-registro.module').then( m => m.SinRegistroPageModule)
+  },
 
 ];
 
