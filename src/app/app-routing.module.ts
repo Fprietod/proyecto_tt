@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from "./guards/auth.guard";
+import { NologinGuard } from "./guards/nologin.guard";
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: 'home',canActivate : [NologinGuard],
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
@@ -12,18 +14,19 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'login',
+    path: 'login',canActivate : [AuthGuard],
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: 'timeline',
     loadChildren: () => import('./timeline/timeline.module').then( m => m.TimelinePageModule)
-  },  {
+  },
+  {
     path: 'status-chat',
     loadChildren: () => import('./status-chat/status-chat.module').then( m => m.StatusChatPageModule)
   },
   {
-    path: 'registro',
+    path: 'registro',canActivate : [NologinGuard],
     loadChildren: () => import('./componentes/registro/registro.module').then( m => m.RegistroPageModule)
   },
   {
