@@ -3,6 +3,7 @@ import {ChatsService, chat } from "../servicios/chats.service";
 import { NavParams, ModalController } from "@ionic/angular";
 import { ChatComponent } from "../componentes/chat/chat.component";
 
+
 @Component({
   selector: 'app-status-chat',
   templateUrl: './status-chat.page.html',
@@ -35,6 +36,7 @@ export class StatusChatPage implements OnInit {
   }
 
 
-  
+
+
 
 }
