@@ -1,15 +1,15 @@
 <ion-header>
   <ion-toolbar color="tertiary">
     <ion-button slot="start" fill="clear" (click)="closeChat()">
-      <ion-icon style="color:#fff; font-size: 25px" name="arrow-round-back"></ion-icon>
+      <ion-icon style="color:#FFFFFF; font-size: 35px" name="arrow-back-outline"></ion-icon>
     </ion-button>
-    <ion-title>{{name}}</ion-title>
+    <ion-title>{{chat.name}}</ion-title>
   </ion-toolbar>
   </ion-header>
 
   <ion-content padding>
-    <ul>
-      <li *ngFor="let mensaje of mensajes">{{mensaje}}</li>
+    <ul *ngIf="room">
+      <li *ngFor="let mensaje of room.messages">{{mensaje.content}}</li>
 
     </ul>
 
