@@ -8,13 +8,17 @@
   </ion-header>
 
   <ion-content padding>
+    <ul>
+      <li *ngFor="let mensaje of mensajes">{{mensaje}}</li>
+
+    </ul>
 
   </ion-content>
 
   <ion-footer padding>
   <ion-item>
-    <ion-textarea></ion-textarea>
-    <ion-button color="success">
+    <ion-textarea [(ngModel)]="msg"></ion-textarea>
+    <ion-button color="success" (click)="sendMessage()">
       <ion-icon name="send"></ion-icon>
     </ion-button>
   </ion-item>

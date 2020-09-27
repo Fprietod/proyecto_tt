@@ -9,6 +9,8 @@ import { NavParams, ModalController } from "@ionic/angular";
 export class ChatComponent implements OnInit {
 
 	public name: string;
+	public mensajes = [];
+	public msg : string;
   constructor( private navparams: NavParams, private modal: ModalController) { }
 
   ngOnInit() {
@@ -18,6 +20,11 @@ export class ChatComponent implements OnInit {
 
     closeChat() {
     this.modal.dismiss()
+  }
+
+  sendMessage(){
+  this.mensajes.push(this.msg)
+  console.log("entro")
   }
 
 }
