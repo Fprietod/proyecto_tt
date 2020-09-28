@@ -51,6 +51,7 @@ export class AuthService {
 
   logout(){
     this.AFauth.auth.signOut().then(() => {
+      this.google.disconnect();
       this.router.navigate(['/home']);
     })
   }
