@@ -16,6 +16,7 @@ import {AngularFireAuthModule} from "@angular/fire/auth"
 import { AngularFirestoreModule, FirestoreSettingsToken } from "@angular/fire/firestore";
 import { ChatComponent } from './componentes/chat/chat.component';
 import { FormsModule } from "@angular/forms";
+import { GooglePlus } from "@ionic-native/google-plus/ngx";
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { FormsModule } from "@angular/forms";
   AngularFireModule.initializeApp(firebaseConfig),
   AngularFireAuthModule,AngularFirestoreModule],
   providers: [
+    GooglePlus,
     StatusBar,
     SplashScreen,
     AppAvailability,
