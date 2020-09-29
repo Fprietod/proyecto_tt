@@ -1,0 +1,15 @@
+.\keytool -exportcert -list -v -alias masterkey -keystore C:\Users\Felipe\Documents\key\masterkey.jks
+SHA1: 40:51:2C:1E:89:E7:28:8C:4D:86:CE:E3:C4:1D:20:2D:4B:37:24:A1
+
+<ion-icon name="logo-twitter" style="color:#15a8fc; font-size: 45px" routerLink="/timeline"></ion-icon>
+ <ion-button color="medium" routerLink="../sin-registro">Acceder sin registrarme</ion-button>
+
+
+.\jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore C:\Users\Felipe\Documents\key\masterkey.jks C:\Users\Felipe\Desktop\TT_CODE\proyecto_tt\platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk masterkey
+
+ionic cordova plugin add cordova-plugin-googleplus --save --variable REVERSED_CLIENT_ID=com.googleusercontent.apps.920781833160-4ip955eq5h89fgp9nqj968v9oun8leot --variable WEB_APPLICATION_CLIENT_ID=920781833160-ov5fnunhjldgrak485eiivtt32ubis7p.apps.googleusercontent.com
+
+.\keytool -list -printcert -jarfile C:\Users\Felipe\Desktop\TT_CODE\proyecto_tt\platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk
+
+
+cordova plugin add cordova-plugin-googleplus --save --variable REVERSED_CLIENT_ID=20781833160-ov5fnunhjldgrak485eiivtt32ubis7p.apps.googleusercontent.com --variable WEB_APPLICATION_CLIENT_ID=920781833160-ov5fnunhjldgrak485eiivtt32ubis7p.apps.googleusercontent.com

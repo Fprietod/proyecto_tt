@@ -18,15 +18,22 @@ export class HomePage {
 
   onSubmitLogin(){
   this.authService.login(this.email, this.password).then( res=> {
-  this.router.navigate(['/login'])
+  this.router.navigate(['/login']);
   }).catch(err => alert('Los datos son incorrectos o no existe el usuario'));
   }
 
 
   loginGoogle(){
   this.authService.loginWithGoogle().then(() => {
-  this.router.navigate(['/login'])
-  }).catch(err => alert('Los datos son incorrectos o no existe el usuario'))
+  this.router.navigate(['/login']);
+  }).catch(err => alert('Los datos son incorrectos o no existe el usuario'+err))
+  }
+
+  loginFacebook(){
+  this.authService.loginWithFacebook().then(() => {
+  this.router.navigate(['/login']);
+  }).catch(err => alert('Los datos son incorrectos o no existe el usuario'+err));
+
   }
 
 }
