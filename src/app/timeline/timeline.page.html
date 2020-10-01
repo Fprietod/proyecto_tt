@@ -6,17 +6,39 @@
     </ion-header>,
     <ion-content fullscreen>
       <ion-card>
-        <img src="./madison.jpg" />
+        <img src="https://fotos-11.s3.amazonaws.com/metrocdmx/avance+metro.jpg" />
         <ion-card-header>
         </ion-card-header>
         <ion-card-content>
           Esta es la última actualización del metro
         Si deseas obtener más información, consulta twitter
     </ion-card-content>
+     <ion-card-content>
+          <p> Horarios</p>
+          <p> Lunes a viernes</p>
+          <p> 5:00 a 0:00 hrs</p>
+          <p> Sábados</p>
+          <p> 6:00 a 0:00 hrs </p>
+          <p> Domingos y días festivos </p>
+          <p> 7:00 a 0:00 hrs </p>
+    </ion-card-content>
+    <ion-card-content>
+      <p> Costo de la tarjeta </p>
+      <p> $15.00 incluye un pasaje</p>
+      <p> Costo del boleto o viaje </p>
+      <p>$5.00 </p>
+
+    </ion-card-content>
       </ion-card>
+
        <ion-item lines="full" (click)="openTwitter('MetroCDMX')">
     <ion-icon name="logo-twitter" slot="start" color="secondary"></ion-icon>
-    Consulta Twitter
+    MetroCDMX
+    <br>
+  
   </ion-item>
+    <ion-button> Consulta la ruta del metro </ion-button>
+  
+  
     </ion-content>
   </ion-app>
