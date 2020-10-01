@@ -5,7 +5,9 @@
 </ion-header>
 
 <ion-content>
-<p> Esto esta funcionando </p>
+<img src="{{ photo }}?width=100" alt="">
+<p> Bienvenido a la aplicación  {{name}}</p>
+
 
   <ion-button expand="block" routerLink="../status-chat">Chat de estaciones del metro</ion-button>
   <ion-button expand="block" (click)="Onlogout()">Desconectarse</ion-button>
