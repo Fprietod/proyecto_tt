@@ -30,6 +30,7 @@
     "@ionic/angular": "^5.0.0",
     "angular-resource": "^1.8.0",
     "angularfire2": "^5.4.2",
+    "cordova-android": "9.0.0",
     "cordova-plugin-inappbrowser": "^4.0.0",
     "firebase": "^7.21.0",
     "ionic-cordova-oauth": "0.0.9",
@@ -84,7 +85,8 @@
       },
       "cordova-plugin-googleplus": {
         "REVERSED_CLIENT_ID": "com.googleusercontent.apps.920781833160-ov5fnunhjldgrak485eiivtt32ubis7p",
-        "WEB_APPLICATION_CLIENT_ID": "920781833160-ov5fnunhjldgrak485eiivtt32ubis7p.apps.googleusercontent.com"
+        "WEB_APPLICATION_CLIENT_ID": "920781833160-ov5fnunhjldgrak485eiivtt32ubis7p.apps.googleusercontent.com",
+        "PLAY_SERVICES_VERSION": "15.0.1"
       },
       "cordova-plugin-whitelist": {},
       "cordova-plugin-statusbar": {},
