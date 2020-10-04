@@ -6,7 +6,9 @@
     </ion-header>,
     <ion-content fullscreen>
       <ion-card *ngFor ="let metro of metrofeed" >
+           <h1><p>{{metro.description}}</p></h1>
           <ion-img [src]="metro.img"></ion-img>
+
         <ion-card-header>
         </ion-card-header>
         <ion-card-content>

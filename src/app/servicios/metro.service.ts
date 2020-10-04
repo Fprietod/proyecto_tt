@@ -6,6 +6,7 @@ import { firestore } from 'firebase';
 export interface metro {
 	img : string
 	id : string
+	description : string
 }
 
 
