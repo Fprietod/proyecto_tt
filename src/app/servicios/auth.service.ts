@@ -56,6 +56,7 @@ export class AuthService {
 
   logout(){
     this.AFauth.auth.signOut().then(() => {
+      this.fb.logout()
       this.google.disconnect();
       this.router.navigate(['/home']);
     })

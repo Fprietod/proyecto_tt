@@ -5,16 +5,22 @@
       </ion-toolbar>
     </ion-header>,
     <ion-content fullscreen>
-      <ion-card *ngFor ="let metro of metrofeed" >
-           <h1><p>{{metro.description}}</p></h1>
-          <ion-img [src]="metro.img"></ion-img>
+      <ion-card>
+           
 
         <ion-card-header>
         </ion-card-header>
-        <ion-card-content>
-          Esta es la última actualización del metro
-        Si deseas obtener más información, consulta twitter
-    </ion-card-content>
+
+        <ion-card-content *ngFor ="let metro of metrofeed">
+           <h1><p>{{metro.description}}</p></h1>
+          <ion-img [src]="metro.img"></ion-img>
+
+          <p>  Esta es la última actualización del metro
+        Si deseas obtener más información, consulta twitter</p>
+        </ion-card-content>
+        
+         
+   
      <ion-card-content>
           <p> Horarios</p>
           <p> Lunes a viernes</p>
