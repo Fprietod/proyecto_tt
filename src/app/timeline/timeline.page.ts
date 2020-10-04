@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { AppAvailability } from '@ionic-native/app-availability/ngx';
 import { InAppBrowser, InAppBrowserObject } from '@ionic-native/in-app-browser/ngx';
+import {MetroService, metro } from "../servicios/metro.service";
+
 
 @Component({
   selector: 'app-timeline',
@@ -9,12 +11,21 @@ import { InAppBrowser, InAppBrowserObject } from '@ionic-native/in-app-browser/n
   styleUrls: ['./timeline.page.scss'],
 })
 export class TimelinePage implements OnInit {
+  
+  public metrofeed :any =[];
 
   constructor(public platform: Platform,
     private appAvailability: AppAvailability,
-    private inAppBrowser: InAppBrowser) { }
+    private inAppBrowser: InAppBrowser,
+    public metroservice: MetroService) { }
 
   ngOnInit() {
+  this.metroservice. getMetroRooms().subscribe( chats => {
+      
+      this.metrofeed = chats;
+      
+    })
+  
   }
 
 

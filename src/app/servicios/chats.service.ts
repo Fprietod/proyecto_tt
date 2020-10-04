@@ -11,6 +11,9 @@ export interface chat {
   img : string
 }
 
+
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -29,6 +32,10 @@ export class ChatsService {
       })
     }))
     			}
+
+
+
+ 
 
     getChatRoom( chat_id : string){
     return this.db.collection('chatsRooms').doc(chat_id).valueChanges()

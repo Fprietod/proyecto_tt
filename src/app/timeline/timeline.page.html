@@ -5,8 +5,8 @@
       </ion-toolbar>
     </ion-header>,
     <ion-content fullscreen>
-      <ion-card>
-        <img src="https://fotos-11.s3.amazonaws.com/metrocdmx/avance+metro.jpg" />
+      <ion-card *ngFor ="let metro of metrofeed" >
+          <ion-img [src]="metro.img"></ion-img>
         <ion-card-header>
         </ion-card-header>
         <ion-card-content>
@@ -37,7 +37,7 @@
     <br>
   
   </ion-item>
-    <ion-button> Consulta la ruta del metro </ion-button>
+    <ion-button routerLink="/rutametro"> Consulta la ruta del metro </ion-button>
   
   
     </ion-content>

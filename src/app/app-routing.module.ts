@@ -32,7 +32,11 @@ const routes: Routes = [
   {
     path: 'sin-registro',
     loadChildren: () => import('./componentes/sin-registro/sin-registro.module').then( m => m.SinRegistroPageModule)
+  },  {
+    path: 'rutametro',
+    loadChildren: () => import('./rutametro/rutametro.module').then( m => m.RutametroPageModule)
   },
+
 
 ];
 
