@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "920781833160",
+    "firebase_url": "https://fir-autenticacion-3239f.firebaseio.com",
+    "project_id": "fir-autenticacion-3239f",
+    "storage_bucket": "fir-autenticacion-3239f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920781833160:android:90da6b9e219533f65476fd",
+        "android_client_info": {
+          "package_name": "com.proyectott.escom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920781833160-c0ifd2pncpmh0iii456j6br66s3l84dg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.proyectott.escom",
+            "certificate_hash": "40512c1e89e7288c4d86cee3c41d202d4b3724a1"
+          }
+        },
+        {
+          "client_id": "920781833160-ov5fnunhjldgrak485eiivtt32ubis7p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXgfCWRqf607Q8fogiril51k7GESWBwg4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "920781833160-ov5fnunhjldgrak485eiivtt32ubis7p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "920781833160-4ip955eq5h89fgp9nqj968v9oun8leot.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.proyectott.escom"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

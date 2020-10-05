@@ -18,6 +18,10 @@ import { ChatComponent } from './componentes/chat/chat.component';
 import { FormsModule } from "@angular/forms";
 import { GooglePlus } from "@ionic-native/google-plus/ngx";
 import { Facebook } from '@ionic-native/facebook/ngx';
+import { FCM } from '@ionic-native/fcm/ngx';
+import { GoogleMaps } from '@ionic-native/google-maps/ngx'; 
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+
 
 
 @NgModule({
@@ -27,6 +31,9 @@ import { Facebook } from '@ionic-native/facebook/ngx';
   AngularFireModule.initializeApp(firebaseConfig),
   AngularFireAuthModule,AngularFirestoreModule],
   providers: [
+    GoogleMaps,
+    Geolocation,
+    FCM,
     Facebook,
     GooglePlus,
     StatusBar,

@@ -36,6 +36,10 @@ const routes: Routes = [
     path: 'rutametro',
     loadChildren: () => import('./rutametro/rutametro.module').then( m => m.RutametroPageModule)
   },
+  {
+    path: 'encuentrame',
+    loadChildren: () => import('./encuentrame/encuentrame.module').then( m => m.EncuentramePageModule)
+  },
 
 
 ];
