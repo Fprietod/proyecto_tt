@@ -28,7 +28,7 @@ export class EncuentramePage implements OnInit {
       longitude: -99.027496,
     },
     title:'Ciudad Azteca',
-    icon: 'src/assets/9.png'
+    icon: 'src/assets/linea_11/21.png'
   },
   {
     position:{
@@ -36,21 +36,39 @@ export class EncuentramePage implements OnInit {
       longitude: -99.030197,
     },
     title:'Plaza aragon',
-    icon: 'src/assets/9.png'
+    icon: 'src/assets/linea_11/20.png'
   },
   {
     position:{
-      latitude: -17.391398,
-      longitude: -66.2407904,
+      latitude: 19.521299,
+      longitude:  -99.033401,
     },
-    title:'Point 3'
+    title:'Olimpica',
+    icon: 'src/assets/linea_11/19.png'
   },
   {
     position:{
-      latitude: -17.3878887,
-      longitude: -66.223664,
+      latitude: 19.515301,
+      longitude: -99.036003,
     },
-    title:'Point 4'
+    title:'Ecatepec',
+    icon: 'src/assets/linea_11/18.png'
+  },
+  {
+  position:{
+  latitude:  19.500999,
+  longitude: -99.041901,
+  },
+  title:'Muzquiz',
+  icon: 'src/assets/linea_11/17.png'
+  },
+  {
+  position:{
+  latitude:19.490999,
+  longitude:-99.0467, 
+  },
+  title:'Rio de los remedios',
+  icon: 'src/assets/linea_11/16.png'
   },
 ];
 
