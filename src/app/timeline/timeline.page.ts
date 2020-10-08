@@ -3,6 +3,7 @@ import { Platform } from '@ionic/angular';
 import { AppAvailability } from '@ionic-native/app-availability/ngx';
 import { InAppBrowser, InAppBrowserObject } from '@ionic-native/in-app-browser/ngx';
 import {MetroService, metro } from "../servicios/metro.service";
+import { FCM } from '@ionic-native/fcm/ngx';
 
 
 @Component({
@@ -17,7 +18,8 @@ export class TimelinePage implements OnInit {
   constructor(public platform: Platform,
     private appAvailability: AppAvailability,
     private inAppBrowser: InAppBrowser,
-    public metroservice: MetroService) { }
+    public metroservice: MetroService,
+    private fcm: FCM) { }
 
   ngOnInit() {
   this.metroservice. getMetroRooms().subscribe( chats => {
@@ -25,6 +27,10 @@ export class TimelinePage implements OnInit {
       this.metrofeed = chats;
       
     })
+
+    this.fcm.getToken().then(token => {
+    console.log(token)
+                                      });
   
   }
 
