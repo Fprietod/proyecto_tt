@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>reportar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form [formGroup]="createReportForm" (submit)="createReport()">
+	<ion-item>
+		<ion-label stacked> Categoria</ion-label>
+		<ion-input
+		formControlName="Categoria"
+		type="text"
+		placeholder="¿Qué tipo de incidente es?"
+		>
+	</ion-input>
+</ion-item>
+
+<ion-item>
+		<ion-label stacked> Estacion</ion-label>
+		<ion-input
+		formControlName="Estacion"
+		type="text"
+		placeholder="¿Qué estacion ocurrio el percance?"
+		>
+	</ion-input>
+</ion-item>
+
+
+	<ion-item>
+		<ion-label stacked> Usuario</ion-label>
+		<ion-input
+		formControlName="Usuario"
+		type="text"
+		placeholder="Escriba su nombre de usuario"
+		>
+	</ion-input>
+</ion-item>
+
+<ion-item>
+		<ion-label stacked> Fecha</ion-label>
+		<ion-input
+		formControlName="Fecha"
+		type="text"
+		placeholder="Por favor digite la hora y fecha en que hace el reporte"
+		>
+	</ion-input>
+</ion-item>
+
+
+	<ion-item>
+		<ion-label stacked> Detalles</ion-label>
+		<ion-textarea
+		formControlName="DetallesIncidente"
+		type="text"
+		placeholder="Menciona los detalles del incidente"
+		>
+	</ion-textarea>
+</ion-item>
+
+<ion-button expand="block" type="submit" [disabled]="!createReportForm.valid">
+	Agregar reporte
+</ion-button>
+<ion-label> Para editar un reporte es necesario que elimine el actual que hizo </ion-label>
+</form>
+
+</ion-content>
+

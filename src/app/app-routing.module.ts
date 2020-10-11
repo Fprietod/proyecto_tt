@@ -3,6 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from "./guards/auth.guard";
 import { NologinGuard } from "./guards/nologin.guard";
 
+
 const routes: Routes = [
   {
     path: 'home',canActivate : [NologinGuard],
@@ -32,7 +33,8 @@ const routes: Routes = [
   {
     path: 'sin-registro',
     loadChildren: () => import('./componentes/sin-registro/sin-registro.module').then( m => m.SinRegistroPageModule)
-  },  {
+  },
+  {
     path: 'rutametro',
     loadChildren: () => import('./rutametro/rutametro.module').then( m => m.RutametroPageModule)
   },
@@ -40,6 +42,18 @@ const routes: Routes = [
     path: 'encuentrame',
     loadChildren: () => import('./encuentrame/encuentrame.module').then( m => m.EncuentramePageModule)
   },
+  {
+    path: 'reportar',
+    loadChildren: () => import('./reportar/reportar.module').then( m => m.ReportarPageModule)
+  },
+  {
+    path: 'detalles/:id',
+    loadChildren: () => import('./detalles/detalles.module').then( m => m.DetallesPageModule)
+  },  {
+    path: 'estado-metro',
+    loadChildren: () => import('./estado-metro/estado-metro.module').then( m => m.EstadoMetroPageModule)
+  },
+
 
 
 ];

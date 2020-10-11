@@ -13,7 +13,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import {firebaseConfig} from "../environments/environment";
 import {AngularFireModule} from "@angular/fire"
 import {AngularFireAuthModule} from "@angular/fire/auth"
-import { AngularFirestoreModule, FirestoreSettingsToken } from "@angular/fire/firestore";
+import { AngularFirestoreModule, SETTINGS } from "@angular/fire/firestore";
 import { ChatComponent } from './componentes/chat/chat.component';
 import { FormsModule } from "@angular/forms";
 import { GooglePlus } from "@ionic-native/google-plus/ngx";
@@ -41,7 +41,7 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
     AppAvailability,
     InAppBrowser,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    {provide: FirestoreSettingsToken, useValue: {}}
+    {provide: SETTINGS, useValue: {}}
   ],
   bootstrap: [AppComponent]
 })
