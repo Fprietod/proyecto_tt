@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="start">
+  		<ion-back-button></ion-back-button>
+  	</ion-buttons>
+    <ion-title>{{ (reporte | async)?.Categoria}} en {{ (reporte | async)?.Estacion}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<h3> Categoria </h3>
+	<p> La categoria del reportes es {{(reporte | async)?.Categoria}} , reportado
+		el {{(reporte | async)?.Fecha}}
+	</p>
+
+	<h3> Usuario que lo reporto </h3>
+	<p> El usuario que hizo este reporte fue: {{ (reporte | async)?.Usuario}}
+
+	</p>
+
+	<h3> Estación del incidente </h3>
+
+	<p> La estación del incidente fue: {{ (reporte | async)?.Estacion}} </p>
+
+	<h3> Detalles del incidente </h3>
+
+	<p> Los detalles del incidente fueron: {{ (reporte | async)?.DetallesIncidente}} </p>
+
+	<ion-button expand="block" (click)="deleteReport()">Eliminar reporte </ion-button>
+
+
+
+</ion-content>

@@ -20,7 +20,7 @@ export class AuthService {
   login(email:string, password:string){
 
   return new Promise((resolve, rejected) =>{
-  this.AFauth.auth.signInWithEmailAndPassword(email, password).then(user => {
+  this.AFauth.signInWithEmailAndPassword(email, password).then(user => {
         resolve(user);
       }).catch(err => rejected(err));
  
@@ -35,7 +35,7 @@ export class AuthService {
    register(email : string, password : string, name : string, edad: number){
 
     return new Promise ((resolve, reject) => {
-      this.AFauth.auth.createUserWithEmailAndPassword(email, password).then( res =>{
+      this.AFauth.createUserWithEmailAndPassword(email, password).then( res =>{
           // console.log(res.user.uid);
         const uid = res.user.uid;
           this.db.collection('users').doc(uid).set({
@@ -55,7 +55,7 @@ export class AuthService {
 
 
   logout(){
-    this.AFauth.auth.signOut().then(() => {
+    this.AFauth.signOut().then(() => {
       this.fb.logout()
       this.google.disconnect();
       this.router.navigate(['/home']);
@@ -67,11 +67,11 @@ export class AuthService {
   if(this.platform.is('cordova')){
   return this.google.login({}).then(result =>{
   const user_data_google = result;
-  return this.AFauth.auth.signInWithCredential(auth.GoogleAuthProvider.credential(null, user_data_google.accessToken));
+  return this.AFauth.signInWithCredential(auth.GoogleAuthProvider.credential(null, user_data_google.accessToken));
   })
   }else{
 
-  return this.AFauth.auth.signInWithPopup(new auth.GoogleAuthProvider)
+  return this.AFauth.signInWithPopup(new auth.GoogleAuthProvider)
 
   }
 
@@ -81,12 +81,12 @@ export class AuthService {
   if(this.platform.is('cordova')){
   return this.fb.login(['email','public_profile']).then((response : FacebookLoginResponse) => {
   const credential_fb = auth.FacebookAuthProvider.credential(response.authResponse.accessToken);
-  return this.AFauth.auth.signInWithCredential(credential_fb);
+  return this.AFauth.signInWithCredential(credential_fb);
 
   })
   }else{
 
-  return this.AFauth.auth.signInWithPopup(new auth.FacebookAuthProvider)
+  return this.AFauth.signInWithPopup(new auth.FacebookAuthProvider)
   }
 
   }
