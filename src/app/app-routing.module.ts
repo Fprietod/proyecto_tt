@@ -53,6 +53,10 @@ const routes: Routes = [
     path: 'estado-metro',
     loadChildren: () => import('./estado-metro/estado-metro.module').then( m => m.EstadoMetroPageModule)
   },
+  {
+    path: 'reporte-iconos',
+    loadChildren: () => import('./reporte-iconos/reporte-iconos.module').then( m => m.ReporteIconosPageModule)
+  },
 
 
 

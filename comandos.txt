@@ -20,3 +20,4 @@ ionic cordova build --release android
 https://leetcode.com/discuss/interview-question/428240/Audible-Onlie-Assessment-for-New-Graduate-Number-of-characters-escaped
 
 https://stackoverflow.com/questions/58599122/query-of-max-order-within-10-year-from-the-first-recorded-order-date
+https://jsmobiledev.com/article/crud-ionic-firestore

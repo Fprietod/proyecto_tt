@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from '@angular/fire/firestore';
 import 'firebase/firestore';
 import { reporte } from  "../models/reporte";
 
@@ -34,6 +34,15 @@ export class FirestoreService {
 
 	getReportList(): AngularFirestoreCollection<reporte>{
 	return this.firestore.collection('reporte');
+	}
+
+
+	getReportDetail(reportId: string): AngularFirestoreDocument<reporte> {
+	return this.firestore.collection('reporte').doc(reportId);
+	}
+
+	deleteReport(reportId: string): Promise<void>{
+	return this.firestore.doc(`reporte/${reportId}`).delete();
 	}
 
 
