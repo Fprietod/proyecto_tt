@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators} from '@angular/forms';
 import { FirestoreService } from "../servicios/firestore.service";
 import { LoadingController, AlertController } from '@ionic/angular';
 import { PreloadAllModules, RouterModule, Routes, Router } from '@angular/router';
+import { DatePipe } from '@angular/common';
 @Component({
   selector: 'app-reportar',
   templateUrl: './reportar.page.html',
@@ -17,11 +18,16 @@ public createReportForm: FormGroup;
 public date = new Date();
 
 
+
+
+
   constructor(public loadingCtrl: LoadingController,
   public alertCtrl: AlertController,
   public firestoreservice: FirestoreService,
   formBuilder: FormBuilder,private router : Router,
+
    ) { 
+
 
   	this.createReportForm = formBuilder.group({
   	Categoria: ['', Validators.required],

@@ -27,8 +27,13 @@
 
 	<p> Los detalles del incidente fueron: {{ (reporte | async)?.DetallesIncidente}} </p>
 
-	<ion-button expand="block" (click)="deleteReport()">Eliminar reporte </ion-button>
+	<ion-button size ="medium" (click)="confirma()">Confirmar incidente</ion-button>
 
+  <ion-button  size="medium" (click)="falso2()" color="success">
+  Reporte Falso </ion-button>
+	<p> El incidente lleva {{incidente_falso}} puntos confirmados de que ha sido reportado como falso</p>
+
+	<p> El incidente lleva {{ incidente_verdadero}} puntos confirmados de verídico {{respuesta}} </p>
 
 
 </ion-content>
