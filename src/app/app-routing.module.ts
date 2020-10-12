@@ -49,13 +49,22 @@ const routes: Routes = [
   {
     path: 'detalles/:id',
     loadChildren: () => import('./detalles/detalles.module').then( m => m.DetallesPageModule)
-  },  {
+  },
+  {
     path: 'estado-metro',
     loadChildren: () => import('./estado-metro/estado-metro.module').then( m => m.EstadoMetroPageModule)
   },
   {
     path: 'reporte-iconos',
     loadChildren: () => import('./reporte-iconos/reporte-iconos.module').then( m => m.ReporteIconosPageModule)
+  },
+  {
+    path: 'estado-metro-sin-registro',
+    loadChildren: () => import('./estado-metro-sin-registro/estado-metro-sin-registro.module').then( m => m.EstadoMetroSinRegistroPageModule)
+  },
+  {
+    path: 'detalles-sin-registro/:id',
+    loadChildren: () => import('./detalles-sin-registro/detalles-sin-registro.module').then( m => m.DetallesSinRegistroPageModule)
   },
 
 
