@@ -35,5 +35,18 @@
 
 	<p> El incidente lleva {{ incidente_verdadero}} puntos confirmados de verídico {{respuesta}} </p>
 
+	 <h2 class="ion-text-center">{{ (reporte | async)?.Estacion}}</h2>
+
+  <ion-card color="light" class="ion-text-center" *ngFor="let item of images | async">
+    <ion-card-header>
+      
+    </ion-card-header>
+
+    <ion-card-content>
+      <img [src]="item.filepath" />
+     
+    </ion-card-content>
+  </ion-card>
+
 
 </ion-content>

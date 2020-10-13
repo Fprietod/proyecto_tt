@@ -1,15 +1,50 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from '@angular/fire/firestore';
+import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/storage';
 import 'firebase/firestore';
 import { reporte } from  "../models/reporte";
+import { Observable } from 'rxjs';
+import { finalize, tap } from 'rxjs/operators';
 
+export interface MyData {
+  name: string;
+  filepath: string;
+  size: number;
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class FirestoreService {
 
-  constructor(public firestore: AngularFirestore) { }
+  // Upload Task 
+  task: AngularFireUploadTask;
+
+  // Progress in percentage
+  percentage: Observable<number>;
+
+  // Snapshot of uploading file
+  snapshot: Observable<any>;
+
+  // Uploaded File URL
+  UploadedFileURL: Observable<string>;
+
+  //Uploaded Image List
+  images: Observable<MyData[]>;
+
+  //File details  
+  fileName:string;
+  fileSize:number;
+
+  //Status check 
+  isUploading:boolean;
+  isUploaded:boolean;
+   private imageCollection: AngularFirestoreCollection<MyData>;
+
+  constructor(public firestore: AngularFirestore) { 
+
+	
+  }
 
   createReport(
 
@@ -17,7 +52,7 @@ export class FirestoreService {
   Estacion: string,
   Usuario: string,
   Fecha: string,
-  DetallesIncidente: string
+    DetallesIncidente: string,
 ): Promise<void> {
 	const id = this.firestore.createId();
 
@@ -28,6 +63,7 @@ export class FirestoreService {
 	Usuario,
 	Fecha,
 	DetallesIncidente,
+	
 	});
 }
 
@@ -44,6 +80,13 @@ export class FirestoreService {
 	deleteReport(reportId: string): Promise<void>{
 	return this.firestore.doc(`reporte/${reportId}`).delete();
 	}
+
+
+	
+
+
+
+
 
 
 
