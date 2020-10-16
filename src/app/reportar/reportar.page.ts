@@ -3,13 +3,18 @@ import { FormGroup, FormBuilder, Validators} from '@angular/forms';
 import { FirestoreService } from "../servicios/firestore.service";
 import { LoadingController, AlertController } from '@ionic/angular';
 import { PreloadAllModules, RouterModule, Routes, Router } from '@angular/router';
-import { DatePipe } from '@angular/common';
+
+
+
 @Component({
   selector: 'app-reportar',
   templateUrl: './reportar.page.html',
   styleUrls: ['./reportar.page.scss'],
 })
 export class ReportarPage implements OnInit {
+
+
+
 
 
 
@@ -27,6 +32,8 @@ public date = new Date();
   formBuilder: FormBuilder,private router : Router,
 
    ) { 
+
+     
 
 
   	this.createReportForm = formBuilder.group({

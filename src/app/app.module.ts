@@ -14,6 +14,7 @@ import {firebaseConfig} from "../environments/environment";
 import {AngularFireModule} from "@angular/fire"
 import {AngularFireAuthModule} from "@angular/fire/auth"
 import { AngularFirestoreModule, SETTINGS } from "@angular/fire/firestore";
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { ChatComponent } from './componentes/chat/chat.component';
 import { FormsModule } from "@angular/forms";
 import { GooglePlus } from "@ionic-native/google-plus/ngx";
@@ -29,7 +30,7 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
   entryComponents: [ChatComponent],
   imports: [FormsModule, BrowserModule, IonicModule.forRoot(), AppRoutingModule,
   AngularFireModule.initializeApp(firebaseConfig),
-  AngularFireAuthModule,AngularFirestoreModule],
+  AngularFireAuthModule,AngularFirestoreModule,AngularFireStorageModule],
   providers: [
     GoogleMaps,
     Geolocation,
