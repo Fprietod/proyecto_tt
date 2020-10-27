@@ -17,7 +17,7 @@ export interface MyData {
 })
 export class FirestoreService {
 
-  // Upload Task 
+  // Upload Task
   task: AngularFireUploadTask;
 
   // Progress in percentage
@@ -32,18 +32,18 @@ export class FirestoreService {
   //Uploaded Image List
   images: Observable<MyData[]>;
 
-  //File details  
+  //File details
   fileName:string;
   fileSize:number;
 
-  //Status check 
+  //Status check
   isUploading:boolean;
   isUploaded:boolean;
    private imageCollection: AngularFirestoreCollection<MyData>;
 
-  constructor(public firestore: AngularFirestore) { 
+  constructor(public firestore: AngularFirestore) {
 
-	
+
   }
 
   createReport(
@@ -53,6 +53,7 @@ export class FirestoreService {
   Usuario: string,
   Fecha: string,
     DetallesIncidente: string,
+    Sugerencia: string,
 ): Promise<void> {
 	const id = this.firestore.createId();
 
@@ -63,7 +64,8 @@ export class FirestoreService {
 	Usuario,
 	Fecha,
 	DetallesIncidente,
-	
+  Sugerencia,
+
 	});
 }
 
@@ -82,7 +84,6 @@ export class FirestoreService {
 	}
 
 
-	
 
 
 
@@ -90,5 +91,6 @@ export class FirestoreService {
 
 
 
-  
+
+
 }
