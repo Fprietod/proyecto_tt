@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from "./guards/auth.guard";
 import { NologinGuard } from "./guards/nologin.guard";
+import { TutorialGuard } from "./guards/tutorial.guard";
 
 
 const routes: Routes = [
   {
-    path: 'home',canActivate : [NologinGuard],
+    path: 'home',canActivate : [NologinGuard, TutorialGuard],
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
@@ -66,6 +67,11 @@ const routes: Routes = [
     path: 'detalles-sin-registro/:id',
     loadChildren: () => import('./detalles-sin-registro/detalles-sin-registro.module').then( m => m.DetallesSinRegistroPageModule)
   },
+  {
+    path: 'tutorial',
+    loadChildren: () => import('./tutorial/tutorial.module').then( m => m.TutorialPageModule)
+  },
+
 
 
 

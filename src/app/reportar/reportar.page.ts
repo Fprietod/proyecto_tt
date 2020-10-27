@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators} from '@angular/forms';
 import { FirestoreService } from "../servicios/firestore.service";
 import { LoadingController, AlertController } from '@ionic/angular';
 import { PreloadAllModules, RouterModule, Routes, Router } from '@angular/router';
+import { AuthService } from "../servicios/auth.service";
 
 
 
@@ -20,8 +21,9 @@ export class ReportarPage implements OnInit {
 
 public createReportForm: FormGroup;
 
-public date = new Date();
 
+public date = new Date();
+	public name : string;
 
 
 
@@ -30,16 +32,18 @@ public date = new Date();
   public alertCtrl: AlertController,
   public firestoreservice: FirestoreService,
   formBuilder: FormBuilder,private router : Router,
+  private authservice : AuthService,
 
-   ) { 
 
-     
+   ) {
+
+
 
 
   	this.createReportForm = formBuilder.group({
   	Categoria: ['', Validators.required],
   	Estacion: ['', Validators.required],
-  	Usuario: ['', Validators.required],
+  	Usuario: [this.name, Validators.required],
   	Fecha: [this.date, Validators.required],
   	DetallesIncidente: ['', Validators.required],
 
@@ -63,7 +67,7 @@ public date = new Date();
   this.firestoreservice.
   createReport(Categoria, Estacion, Usuario, Fecha, DetallesIncidente).then(() =>{
   loading.dismiss().then(() => {
-  this.router.navigateByUrl[('/estado-metro')];
+  this.router.navigateByUrl('/estado-metro')
   });
   },
   error => {
@@ -79,6 +83,11 @@ public date = new Date();
 
 
   ngOnInit() {
+    this.authservice.getUserAuth().subscribe(user => {
+    this.name = user.displayName;
+
+    })
+
   }
 
 }

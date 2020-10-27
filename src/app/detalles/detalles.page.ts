@@ -25,7 +25,7 @@ export interface MyData {
 })
 export class DetallesPage implements OnInit {
 
- // Upload Task 
+ // Upload Task
   task: AngularFireUploadTask;
 
   // Progress in percentage
@@ -40,11 +40,11 @@ export class DetallesPage implements OnInit {
   //Uploaded Image List
   images: Observable<MyData[]>;
 
-  //File details  
+  //File details
   fileName:string;
   fileSize:number;
 
-  //Status check 
+  //Status check
   isUploading:boolean;
   isUploaded:boolean;
 
@@ -53,7 +53,7 @@ export class DetallesPage implements OnInit {
 	public reporte: Observable<reporte>;
 	public reportId: string = this.route.snapshot.paramMap.get('id');
 
-  constructor(private firestoreService: FirestoreService, private route: ActivatedRoute, alertController: AlertController, private router : Router,private storage: AngularFireStorage, private database: AngularFirestore) { 
+  constructor(private firestoreService: FirestoreService, private route: ActivatedRoute, alertController: AlertController, private router : Router,private storage: AngularFireStorage, private database: AngularFirestore) {
   this.isUploading = false;
     this.isUploaded = false;
     //Set collection where our documents/ images info will save
@@ -68,7 +68,7 @@ export class DetallesPage implements OnInit {
 
   deleteReport(){
   this.firestoreService.deleteReport(this.reportId).then(() =>{
-  this.router.navigateByUrl[('/estado-metro')];
+  this.router.navigateByUrl('/estado-metro')
   });
   }
 
@@ -76,13 +76,13 @@ export class DetallesPage implements OnInit {
 
 
   uploadFile(event: FileList) {
-    
+
 
     // The File object
     const file = event.item(0)
 
     // Validation for Images Only
-    if (file.type.split('/')[0] !== 'image') { 
+    if (file.type.split('/')[0] !== 'image') {
      console.error('unsupported file type :( ')
      return;
     }
@@ -108,12 +108,12 @@ export class DetallesPage implements OnInit {
     // Get file progress percentage
     this.percentage = this.task.percentageChanges();
     this.snapshot = this.task.snapshotChanges().pipe(
-      
+
       finalize(() => {
         // Get uploaded file storage path
         this.UploadedFileURL = fileRef.getDownloadURL();
-       
-        
+
+
         this.UploadedFileURL.subscribe(resp=>{
           this.addImagetoDB({
             name: file.name,
