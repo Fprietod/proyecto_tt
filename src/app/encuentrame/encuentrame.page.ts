@@ -8,6 +8,8 @@ import {
  CameraPosition,
  MarkerOptions
 } from '@ionic-native/google-maps/ngx';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { first } from 'rxjs/operators';
 
 declare var google: any
 
@@ -20,6 +22,8 @@ export class EncuentramePage implements OnInit {
 
 	map: GoogleMap;
 	myPosition: any = {};
+  public estaciones: any[];
+  public estacionesBackup: any[];
 
   markers: any[] = [
   {
@@ -74,11 +78,12 @@ export class EncuentramePage implements OnInit {
 
 
   constructor(private googleMaps: GoogleMaps,
-   private geolocation: Geolocation) { }
+   private geolocation: Geolocation, private firestore: AngularFirestore) { }
 
-  ngOnInit() {
+  async ngOnInit() {
  	
   this.getCurrentPosition();
+  this.estaciones = await this.initializeItem();
 
  	
   }
@@ -86,6 +91,13 @@ export class EncuentramePage implements OnInit {
   ionViewDidLoad(){
   this.getCurrentPosition();
 }
+
+async initializeItem(): Promise<any> {
+    const estaciones = await this.firestore.collection('estaciones')
+    .valueChanges().pipe(first()).toPromise();
+    this.estacionesBackup = estaciones;
+    return estaciones;
+  }
 
 
 

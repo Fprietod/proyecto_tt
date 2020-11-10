@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { first } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-reporte-iconos',
@@ -8,16 +11,38 @@ import { Router } from '@angular/router';
 })
 export class ReporteIconosPage implements OnInit {
 
-	public categoria : string
-  constructor(private router: Router ) { }
+	public estaciones: any[];
+  public estacionesBackup: any[];
+  constructor(private router: Router, private firestore: AngularFirestore ) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.estaciones = await this.initializeItem();
+
   }
 
- Categoria(){
- 
- this.router.navigate[('/rutametro')];
- console.log("Hola")
- }
+  async initializeItem(): Promise<any> {
+    const estaciones = await this.firestore.collection('estaciones')
+    .valueChanges().pipe(first()).toPromise();
+    this.estacionesBackup = estaciones;
+    return estaciones;
+  }
+
+  async filterList(evt){
+    this.estaciones = this.estacionesBackup;
+    const searchTerm = evt.srcElement.value;
+    if (!searchTerm){
+      return;
+    }
+
+    this.estaciones = this.estaciones.filter(currentStation => {
+      if(currentStation.name && searchTerm){
+        return(currentStation.name.toLowerCase().indexOf(searchTerm.toLowerCase
+        ()) > -1  || currentStation.type.toLowerCase().indexOf(searchTerm.toLowerCase
+        ()) > -1 );
+      }
+    });
+}
+
+
 
 }

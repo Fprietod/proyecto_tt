@@ -3,6 +3,8 @@ import { FirestoreService } from "../servicios/firestore.service";
 import { reporte } from '../models/reporte';
 import { Observable } from 'rxjs';
 import 'firebase/firestore';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { first } from 'rxjs/operators';
 
 
 @Component({

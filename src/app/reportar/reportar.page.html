@@ -5,9 +5,20 @@
   	</ion-buttons>
     <ion-title>reportar</ion-title>
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content>
+  <p>Las Categorias que se pueden reportar son: </p>
+  <ul>
+  <li>Accidente </li>
+  <li>Retardo </li>
+  <li>Fuera de servicio </li>
+  <li> Saturación </li>
+  <li>otro </li>
+
+</ul>
+
 <form [formGroup]="createReportForm" (submit)="createReport()">
 	<ion-item>
 		<ion-label stacked> Categoria</ion-label>
@@ -24,10 +35,15 @@
 		<ion-input
 		formControlName="Estacion"
 		type="text"
-		placeholder="¿Qué estacion ocurrio el percance?"
-		>
+		placeholder="¿Qué estación es?"
+
+
+      >
+
 	</ion-input>
-</ion-item>
+  </ion-item>
+
+
 
 
 	<ion-item>
@@ -35,7 +51,7 @@
 		<ion-input
 		formControlName="Usuario"
 		type="text"
-		placeholder="Escriba su nombre de usuario"
+		placeholder={{name}}
 		>
 	</ion-input>
 </ion-item>
@@ -61,6 +77,16 @@
 	</ion-textarea>
 </ion-item>
 
+<ion-item>
+  <ion-label stacked> Sugerencia</ion-label>
+  <ion-textarea
+  formControlName="Sugerencia"
+  type="text"
+  placeholder="Favor de agregar una sugerencia para los usuarios"
+  >
+</ion-textarea>
+</ion-item>
+
 <ion-button expand="block" type="submit" [disabled]="!createReportForm.valid">
 	Agregar reporte
 </ion-button>
@@ -68,4 +94,3 @@
 </form>
 
 </ion-content>
-

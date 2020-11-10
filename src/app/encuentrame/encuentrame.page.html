@@ -5,10 +5,26 @@
 </ion-header>
 
 <ion-content>
-   <div id="map"></div>
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+   <div id="map">
+     <ion-fab vertical="bottom" horizontal="start" slot="fixed">
     <ion-fab-button color="danger" (click)="getPosition()">
       <ion-icon name="pin"></ion-icon>
     </ion-fab-button>
   </ion-fab>
+   </div>
+  
+  <ion-list lines ="none">
+		<ion-item *ngFor="let estacionItem of estaciones">
+			<ion-label class="ion-text-wrap">
+        <ion-text color="primary">
+          <h3>{{estacionItem.name}}</h3>
+          </ion-text>
+          <p>{{estacionItem.type}}</p>
+          <ion-button  size="medium" routerLink="/reportar" color="success">
+         Reportar </ion-button>
+         <ion-button  size="medium" routerLink="/estado-metro" color="success">
+         Ver notificaciones </ion-button>
+          </ion-label>
+          </ion-item>
+          </ion-list>
 </ion-content>

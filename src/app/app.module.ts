@@ -22,6 +22,7 @@ import { Facebook } from '@ionic-native/facebook/ngx';
 import { FCM } from '@ionic-native/fcm/ngx';
 import { GoogleMaps } from '@ionic-native/google-maps/ngx'; 
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { IonicStorageModule } from '@ionic/storage';
 
 
 
@@ -30,7 +31,8 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
   entryComponents: [ChatComponent],
   imports: [FormsModule, BrowserModule, IonicModule.forRoot(), AppRoutingModule,
   AngularFireModule.initializeApp(firebaseConfig),
-  AngularFireAuthModule,AngularFirestoreModule,AngularFireStorageModule],
+  AngularFireAuthModule,AngularFirestoreModule,AngularFireStorageModule,
+    IonicStorageModule.forRoot()],
   providers: [
     GoogleMaps,
     Geolocation,
