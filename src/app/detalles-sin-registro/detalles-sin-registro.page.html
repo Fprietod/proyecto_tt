@@ -27,6 +27,10 @@
 
 	<p> Los detalles del incidente fueron: {{ (reporte | async)?.DetallesIncidente}} </p>
 
+	<h3> Sugerencia de los usuarios </h3>
+
+  <p> La sugerencia de los usuarios es: {{ (reporte | async)?.Sugerencia}} </p>
+
 	<ion-button size ="medium" (click)="confirma()">Confirmar incidente</ion-button>
 
   <ion-button  size="medium" (click)="falso2()" color="success">
