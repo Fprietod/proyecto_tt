@@ -37,6 +37,7 @@
     "angularfire2": "^5.4.2",
     "cordova-android": "9.0.0",
     "cordova-browser": "6.0.0",
+    "cordova-ios": "6.1.1",
     "cordova-plugin-inappbrowser": "^4.0.0",
     "firebase": "^7.23.0",
     "ionic-cordova-oauth": "0.0.9",
