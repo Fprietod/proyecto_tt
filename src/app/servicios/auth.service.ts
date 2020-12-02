@@ -5,7 +5,6 @@ import { AngularFirestore } from "@angular/fire/firestore";
 import { Router } from "@angular/router";
 import { GooglePlus } from "@ionic-native/google-plus/ngx";
 import { auth } from 'firebase';
-import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx';
 import { Platform } from "@ionic/angular";
 
 @Injectable({
@@ -15,7 +14,7 @@ export class AuthService {
 
   constructor(private AFauth : AngularFireAuth,private db : AngularFirestore,
   private router : Router, private google : GooglePlus,
-  private fb : Facebook, public platform: Platform) { }
+   public platform: Platform) { }
 
   login(email:string, password:string){
 
@@ -56,7 +55,6 @@ export class AuthService {
 
   logout(){
     this.AFauth.signOut().then(() => {
-      this.fb.logout()
       this.google.disconnect();
       this.router.navigate(['/home']);
     })
@@ -77,19 +75,7 @@ export class AuthService {
 
   }
 
-  loginWithFacebook(){
-  if(this.platform.is('cordova')){
-  return this.fb.login(['email','public_profile']).then((response : FacebookLoginResponse) => {
-  const credential_fb = auth.FacebookAuthProvider.credential(response.authResponse.accessToken);
-  return this.AFauth.signInWithCredential(credential_fb);
-
-  })
-  }else{
-
-  return this.AFauth.signInWithPopup(new auth.FacebookAuthProvider)
-  }
-
-  }
+  
 
   getUserAuth(){
   return this.AFauth.authState

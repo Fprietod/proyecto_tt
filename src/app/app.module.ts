@@ -18,7 +18,6 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { ChatComponent } from './componentes/chat/chat.component';
 import { FormsModule } from "@angular/forms";
 import { GooglePlus } from "@ionic-native/google-plus/ngx";
-import { Facebook } from '@ionic-native/facebook/ngx';
 import { FCM } from '@ionic-native/fcm/ngx';
 import { GoogleMaps } from '@ionic-native/google-maps/ngx'; 
 import { Geolocation } from '@ionic-native/geolocation/ngx';
@@ -37,7 +36,6 @@ import { IonicStorageModule } from '@ionic/storage';
     GoogleMaps,
     Geolocation,
     FCM,
-    Facebook,
     GooglePlus,
     StatusBar,
     SplashScreen,
