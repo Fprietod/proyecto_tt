@@ -29,12 +29,7 @@ export class HomePage {
   }).catch(err => alert('Los datos son incorrectos o no existe el usuario'+err))
   }
 
-  loginFacebook(){
-  this.authService.loginWithFacebook().then(() => {
-  this.router.navigate(['/login']);
-  }).catch(err => alert('Los datos son incorrectos o no existe el usuario'+err));
-
-  }
+  
 
 }
 
