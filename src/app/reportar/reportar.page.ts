@@ -111,7 +111,5 @@ public date = new Date();
   this.estacion = SelectedValue2;
    
    } 
-  
-
 
 }

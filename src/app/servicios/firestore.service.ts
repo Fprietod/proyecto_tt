@@ -83,6 +83,15 @@ export class FirestoreService {
 	return this.firestore.doc(`reporte/${reportId}`).delete();
 	}
 
+  
+
+
+
+
+
+
+
+
 
 
 
