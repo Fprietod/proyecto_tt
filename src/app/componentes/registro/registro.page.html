@@ -32,10 +32,10 @@
 </ion-item>
 <br>
 <ion-item>
-  <ion-label>Terminos y Condiciones</ion-label>
-  <ion-checkbox [(ngModel)]="Condiciones" (ionChange)="updateCondiciones()"></ion-checkbox>
+  <ion-label> Acepto los terminos y condiciones</ion-label>
+  <ion-checkbox [(ngModel)]="checkedbtn"></ion-checkbox>
 </ion-item>
-<ion-button color="secondary" expand="block" (click)="OnSubmitRegister()">Registrarse</ion-button>
+<ion-button color="secondary" expand="block" (click)="OnSubmitRegister()" [disabled]="!checkedbtn">Registrarse</ion-button>
 <br>
 <p text-center routerLink="/home">Ya tengo cuenta</p>
 

@@ -13,11 +13,13 @@ export class RegistroPage implements OnInit {
   public  name : string;
   public password : string;
   public edad : number;
-  private condiciones: boolean;
+  checkedbtn: boolean;
+  
 
   constructor(private auth : AuthService, private router : Router) { }
 
   ngOnInit() {
+  
   }
 
   OnSubmitRegister(){
@@ -31,10 +33,6 @@ export class RegistroPage implements OnInit {
     {
     alert('Solo pueden registrarse usuarios mayores de 18 años')
     }
-  }
-
-    updateCondiciones() {
-    console.log('Nuevo estado:' + this.condiciones);
   }
 
 }
