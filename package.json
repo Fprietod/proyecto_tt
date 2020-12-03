@@ -22,7 +22,7 @@
     "@angular/router": "~10.0.0",
     "@ionic-native/app-availability": "^5.28.0",
     "@ionic-native/core": "^5.0.0",
-    "@ionic-native/facebook": "^5.28.0",
+    "@ionic-native/facebook": "^5.30.0",
     "@ionic-native/fcm": "^5.28.0",
     "@ionic-native/geolocation": "^5.28.0",
     "@ionic-native/google-maps": "^5.5.0",

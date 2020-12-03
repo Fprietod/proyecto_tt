@@ -4,6 +4,9 @@ SHA1: 40:51:2C:1E:89:E7:28:8C:4D:86:CE:E3:C4:1D:20:2D:4B:37:24:A1
 <ion-icon name="logo-twitter" style="color:#15a8fc; font-size: 45px" routerLink="/timeline"></ion-icon>
  <ion-button color="medium" routerLink="../sin-registro">Acceder sin registrarme</ion-button>
 
+ ionic cordova plugin add cordova-plugin-facebook4 --variable APP_ID="2721316718135008" --variable APP_NAME="myapp"
+
+
 
 .\jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore C:\Users\Felipe\Documents\key\masterkey.jks C:\Users\Felipe\Desktop\TT_CODE\proyecto_tt\platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk masterkey
 
