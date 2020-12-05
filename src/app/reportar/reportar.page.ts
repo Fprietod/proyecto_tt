@@ -28,6 +28,8 @@ public date = new Date();
 	public name : string;
   public estaciones: any[];
   public estacionesBackup: any[];
+  public categoria : string;
+  public estacion : string;
 
 
 
@@ -39,14 +41,14 @@ public date = new Date();
   private authservice : AuthService, private firestore: AngularFirestore,
 
 
-   ) {
+   ) 
+
+   {
 
 
 
 
   	this.createReportForm = formBuilder.group({
-  	Categoria: ['', Validators.required],
-  	Estacion: ['', Validators.required],
   	Usuario: [this.name, Validators.required],
   	Fecha: [this.date, Validators.required],
   	DetallesIncidente: ['', Validators.required],
@@ -63,8 +65,8 @@ public date = new Date();
 
   const loading = await this.loadingCtrl.create();
 
-  const Categoria = this.createReportForm.value.Categoria;
-  const Estacion = this.createReportForm.value.Estacion;
+  const Categoria = this.categoria;
+  const Estacion = this.estacion;
   const Usuario = this.createReportForm.value.Usuario;
   const Fecha = this.createReportForm.value.Fecha;
   const DetallesIncidente = this.createReportForm.value.DetallesIncidente;
@@ -92,11 +94,22 @@ public date = new Date();
     this.authservice.getUserAuth().subscribe(user => {
     this.name = user.displayName;
 
+
     })
+
 
 
   }
 
 
+  onChange(SelectedValue){ console.log("Selected car", SelectedValue);
+  this.categoria = SelectedValue;
+   
+   } 
+
+   onChange2(SelectedValue2){ console.log("Selected car", SelectedValue2);
+  this.estacion = SelectedValue2;
+   
+   } 
 
 }

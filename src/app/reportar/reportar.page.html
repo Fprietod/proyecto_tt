@@ -9,7 +9,7 @@
 </ion-header>
 
 <ion-content>
-  <p>Las Categorias que se pueden reportar son: </p>
+ <!--  <p>Las Categorias que se pueden reportar son: </p>
   <ul>
   <li>Accidente </li>
   <li>Retardo </li>
@@ -17,10 +17,35 @@
   <li> Saturación </li>
   <li>otro </li>
 
-</ul>
+</ul> -->
+<ion-list>
+  <ion-item>
+    <ion-label>Seleccione la categoria del percance</ion-label>
+    <ion-select #newSelect [(ngModel)]="carbrand" (ionChange)="onChange(carbrand)">
+      <ion-select-option value="Accidente">Accidente</ion-select-option>
+      <ion-select-option value="Retardo">Retardo</ion-select-option>
+      <ion-select-option value="Fuera de Servicio">Fuera de Servicio</ion-select-option>
+      <ion-select-option value="Saturacion">Saturacion</ion-select-option>
+      <ion-select-option value = "otro">Otro </ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<ion-list>
+  <ion-item>
+    <ion-label>Seleccione la estación</ion-label>
+    <ion-select #newSelect [(ngModel)]="estacion" (ionChange)="onChange2(estacion)">
+      <ion-select-option value="Ciudad Azteca">Ciudad Azteca</ion-select-option>
+      <ion-select-option value="Plaza Aragon">Plaza Aragon</ion-select-option>
+      <ion-select-option value="Olimpica">Olimpica</ion-select-option>
+      <ion-select-option value="Ecatepec">Ecatepec</ion-select-option>
+      <ion-select-option value = "Muzquiz">Muzquiz </ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
 
 <form [formGroup]="createReportForm" (submit)="createReport()">
-	<ion-item>
+<!-- 	<ion-item>
 		<ion-label stacked> Categoria</ion-label>
 		<ion-input
 		formControlName="Categoria"
@@ -28,9 +53,9 @@
 		placeholder="¿Qué tipo de incidente es?"
 		>
 	</ion-input>
-</ion-item>
+</ion-item> -->
 
-<ion-item>
+<!-- <ion-item>
 		<ion-label stacked> Estacion</ion-label>
 		<ion-input
 		formControlName="Estacion"
@@ -41,7 +66,7 @@
       >
 
 	</ion-input>
-  </ion-item>
+  </ion-item> -->
 
 
 
@@ -72,7 +97,8 @@
 		<ion-textarea
 		formControlName="DetallesIncidente"
 		type="text"
-		placeholder="Menciona los detalles del incidente"
+		placeholder="Detalles para los usuarios"
+		
 		>
 	</ion-textarea>
 </ion-item>
@@ -82,7 +108,7 @@
   <ion-textarea
   formControlName="Sugerencia"
   type="text"
-  placeholder="Favor de agregar una sugerencia para los usuarios"
+  placeholder="Sugerencia para los usuarios"
   >
 </ion-textarea>
 </ion-item>
@@ -92,5 +118,6 @@
 </ion-button>
 <ion-label> Para editar un reporte es necesario que elimine el actual que hizo </ion-label>
 </form>
+
 
 </ion-content>

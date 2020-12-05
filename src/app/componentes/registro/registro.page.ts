@@ -13,10 +13,13 @@ export class RegistroPage implements OnInit {
   public  name : string;
   public password : string;
   public edad : number;
+  checkedbtn: boolean;
+  
 
   constructor(private auth : AuthService, private router : Router) { }
 
   ngOnInit() {
+  
   }
 
   OnSubmitRegister(){

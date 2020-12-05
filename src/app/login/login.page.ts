@@ -16,6 +16,7 @@ export class LoginPage implements OnInit {
 
 	name : string;
 	photo : string;
+  carro : string;
 
 
   constructor(private authservice : AuthService,
@@ -36,6 +37,8 @@ export class LoginPage implements OnInit {
  Onlogout(){
     this.authservice.logout();
   }
+
+
 
 
 }
