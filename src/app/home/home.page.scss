@@ -8,6 +8,11 @@
   transform: translateY(-50%);
 }
 
+.socialLogin {
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
 #container strong {
   font-size: 20px;
   line-height: 26px;
@@ -43,3 +48,59 @@ icon-content{
 .facebook{
   --background: #4267B2
 }
+
+.container-logo {
+    display: inline-block;
+    width: 100%;
+    margin: 20px 0;
+    img {
+      max-width: 250px;
+    }
+  }
+
+  .sepretor-or {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+  .sepretor-or p {
+    color: white  ;
+    font-size: 16px;
+    text-transform: lowercase;
+  }
+  .sepretor-or p::before,
+  .sepretor-or p::after {
+    float: left;
+    width: -webkit-calc(48% - 10px);
+    width: -moz-calc(48% - 10px);
+    width: calc(48% - 10px);
+    display: inline-block;
+    height: 1px;
+    margin-top: 8px;
+    background-image: url('/assets/seprator.png');
+    background-repeat: repeat;
+    content: '';
+  }
+  .sepretor-or p::after {
+    float: right;
+  }
+
+  ion-content {
+  --background: url('/assets/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+
+.form-bottom-text {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .main-content {
+   
+    
+    min-height: 100%;
+  }
