@@ -35,4 +35,17 @@ export class RegistroPage implements OnInit {
     }
   }
 
+  loginGoogle(){
+  this.auth.loginWithGoogle().then(() => {
+  this.router.navigate(['/login']);
+  }).catch(err => alert('Los datos son incorrectos o no existe el usuario'+err))
+  }
+
+  loginFacebook(){
+  this.auth.loginWithFacebook().then(() => {
+  this.router.navigate(['/login']);
+  }).catch(err => alert('Los datos son incorrectos o no existe el usuario'+err));
+
+  }
+
 }

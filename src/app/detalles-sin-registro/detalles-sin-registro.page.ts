@@ -76,7 +76,7 @@ export class DetallesSinRegistroPage implements OnInit {
    this.contador_verdadero = this.incidente_verdadero
    this.contador_verdadero = this.contador_verdadero+=1;
    this.incidente_verdadero = this.contador_verdadero;
-   if(this.incidente_verdadero >= 4){
+   if(this.incidente_verdadero >= 3){
    this.respuesta = "Este reporte es confiable";
    }
    }

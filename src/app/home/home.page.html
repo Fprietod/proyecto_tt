@@ -1,27 +1,26 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
       APP METROCDMX
     </ion-title>
   </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">MetroCDMX</ion-title>
-    </ion-toolbar>
-  </ion-header>
+</ion-header> -->
+<ion-content>
+   <div class="main-content">
+ 
 
    <!--  <ion-button expand="full" routerLink="/timeline" color="danger" (click)="routingViaAngular()">
   Estaciones del metro </ion-button> -->
-    <ion-card>
-    <ion-card-content>
-      <strong>Bienvenido a la aplicación del metro</strong>
-     <img src="https://fotos-11.s3.amazonaws.com/metrocdmx/metrologo.jpg" />
-   </ion-card-content>
- </ion-card>
-  <ion-item>
+   
+    
+      <div padding text-center class="container-logo">
+     
+     <img src="assets/logo.png" />
+   </div>
+ <div padding class="container-bottom">
+ <ion-list>
+ 
+    <ion-item padding-right>
     <ion-label positions="floating"> Correo electronico </ion-label>
     <ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
   </ion-item>
@@ -29,36 +28,47 @@
     <ion-label positions="floating"> Contraseña </ion-label>
     <ion-input [(ngModel)]="password" type="password" name="password"></ion-input>
   </ion-item>
+</ion-list>
   <br>
-  <ion-button (click)="onSubmitLogin()" expand="block">Entrar</ion-button>
+  <ion-button (click)="onSubmitLogin()" expand="block"ion-button full color="dark">Entrar</ion-button>
+</div>
+  <div class="sepretor-or" padding-horizontal> <p>Or</p></div>
   <ion-grid>
     <ion-row>
-      <ion-col size="3">
-        <ion-button class="google" (click)="loginGoogle()">
-          <ion-icon name="logo-google"></ion-icon>
-        </ion-button>
-      </ion-col>
-        <ion-col size="3">
-        <ion-button class="facebook" (click)="loginFacebook()">
-          <ion-icon name="logo-facebook"></ion-icon>
-
-        </ion-button>
+      <div text-center class="socialLogin" padding>
+      
         
+        <ion-button class="google" (click)="loginGoogle()">
+          <ion-icon name="logo-google" style="margin-right: 12px;"></ion-icon>Inicia con Google +
+        </ion-button>
+      
+    
+
+        
+        
+        <ion-button class="facebook" (click)="loginFacebook()">
+          <ion-icon name="logo-facebook" style="margin-right: 12px;"></ion-icon> Inicia con Facebook
+        </ion-button>
        
-  
-      </ion-col>
+      </div>
     </ion-row>
   </ion-grid>
+  <div class="sepretor-or" padding-horizontal> <p>Or</p></div>
+  <div padding text-center class="form-bottom-text">
   <ion-button expand="block" routerLink="../registro">No tengo una cuenta</ion-button>
-   <ion-button color="medium" routerLink="../sin-registro">Acceder sin registrarme</ion-button>
+  </div>
+    <div padding text-center class="form-bottom-text">
+   <ion-button color="medium" expand="block" routerLink="../sin-registro">Acceder sin registrarme</ion-button>
+ </div>
+
+ 
   
 
-
+</div>
 </ion-content>
 <ion-footer>
   <ion-toolbar>
-    <ion-title>Footer</ion-title>
-    <ion-icon name="logo-twitter" style="color:#15a8fc; font-size: 45px" routerLink="/timeline"></ion-icon>
-     
+    <ion-title>Subtrack 2020</ion-title>
+    
   </ion-toolbar>
 </ion-footer>
