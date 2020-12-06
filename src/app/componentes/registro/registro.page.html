@@ -1,12 +1,10 @@
-<ion-header>
-  <ion-toolbar color="secondary">
-    <ion-title text-center>Registro</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <div class="main-content">
+  <div padding text-center class="container-logo">
+      <img src="assets/logo.png">
+    </div>
 
-<ion-content padding>
-  <img class="icon" src="assets/icon/register.svg" alt="">
-
+<div padding  style="width: 100%;">
   <ion-item>
       <ion-label position="floating" > Nombre</ion-label>
       <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
@@ -35,9 +33,28 @@
   <ion-label> Acepto los terminos y condiciones</ion-label>
   <ion-checkbox [(ngModel)]="checkedbtn"></ion-checkbox>
 </ion-item>
-<ion-button color="secondary" expand="block" (click)="OnSubmitRegister()" [disabled]="!checkedbtn">Registrarse</ion-button>
+<ion-button ion-button full color="dark" expand="block" (click)="OnSubmitRegister()" [disabled]="!checkedbtn">Registrarse</ion-button>
 <br>
-<p text-center routerLink="/home">Ya tengo cuenta</p>
+<div class="sepretor-or" padding-horizontal> <p>Or</p></div>
+<div padding text-center class="form-bottom-text">
+        <label>Inicia sesión con: </label>
+        </div>
+<div text-center class="socialLogin" padding>
+  <ion-button class="google" (click)="loginGoogle()">
+          <ion-icon name="logo-google" style="margin-right: 12px;"></ion-icon>Inicia con Google +
+        </ion-button>
 
-
+        <ion-button class="facebook" (click)="loginFacebook()">
+          <ion-icon name="logo-facebook" style="margin-right: 12px;"></ion-icon> Inicia con Facebook
+        </ion-button>
+</div>
+<div class="sepretor-or" padding-horizontal> <p>Or</p></div>
+<div padding text-center class="form-bottom-text">
+      <label> ¿Ya tienes una cuenta? <a href="javascript:void(0);" routerLink="/home"> Inicia sesión </a> </label>
+    </div>
+    <div padding text-center class="form-bottom-text">
+      <label> Terminos y condiciones <a href="https://market.ionicframework.com/starters/firebase-social-login"> Más información </a> </label>
+    </div>
+</div>
+</div>
 </ion-content>
