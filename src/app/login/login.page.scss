@@ -1,7 +1,23 @@
-img {
-	 background-image: url('https://fotos-11.s3.amazonaws.com/metrocdmx/%C3%ADndice.jpg');
-	 width: 210px;
-	 height: 210px;
-	 display:block;
-	 margin:auto;
+.container-logo {
+    display: inline-block;
+    width: 100%;
+    margin: 20px 0;
+    img {
+      max-width: 250px;
+    }
+  }
+
+  ion-content {
+  --background: url('/assets/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
+
+.socialLogin {
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
+  

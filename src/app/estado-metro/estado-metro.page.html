@@ -8,6 +8,9 @@
 </ion-header>
 
 <ion-content padding>
+	<div padding text-center class="container-logo">
+      <img src="assets/logo.png">
+    </div>
 <ion-card
  *ngFor="let reporte of reporte | async"
  routerLink="/detalles/{{reporte.id}}"
