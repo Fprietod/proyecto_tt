@@ -1,13 +1,24 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>sin-registro</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-<ion-button  size="medium" routerLink="/timeline" color="success">
-  Información de twitter </ion-button>
-   <ion-button expand="block" routerLink="../status-chat">Estado de las líneas</ion-button>
-   <ion-button  size="medium" routerLink="/estado-metro-sin-registro" color="success">
-  Ver notificaciones </ion-button>
+<div padding text-center class="container-logo">
+      <img src="assets/logo.png">
+    </div>
+
+   
+  <div text-center class="socialLogin" padding> 
+  <ion-button size="small" routerLink="../status-chat">Consulta el chat del estado de las líneas del metro</ion-button>
+
+
+  <ion-button  size="small" routerLink="/timeline" color="success">
+  Consulta la información de Twitter </ion-button>
+  <ion-button  size="small" routerLink="/encuentrame" color="success">
+  ¿Qué estaciones me quedan cerca? </ion-button>
+  <ion-button  size="small" routerLink="/estado-metro-sin-registro" color="success">
+  Ver notificación sobre los reportes </ion-button>
+  <ion-button  expand="small" routerLink="/reporte-iconos" color="success">
+  Busca una estación en particular </ion-button>
+      
+</div>
+
+
+
 </ion-content>

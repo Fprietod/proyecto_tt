@@ -1,13 +1,7 @@
-<ion-header>
-  <ion-toolbar>
-  	<ion-buttons slot="start">
-  		<ion-back-button></ion-back-button>
-  	</ion-buttons>
-    <ion-title>{{ (reporte | async)?.Categoria}}</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <div padding text-center class="container-logo">
+      <img src="assets/logo.png">
+    </div>
 
 	<h3> Categoria </h3>
 	<p> La categoria del reportes es {{(reporte | async)?.Categoria}} , reportado
@@ -40,7 +34,7 @@
     </ion-card-header>
     <ion-card-content>
       <ion-button color="success" shape="round" size="large">
-        <span>Select Image</span>
+        <span></span>
         <input id="uploadBtn" type="file" class="upload" (change)="uploadFile($event.target.files)" />
       </ion-button>
     </ion-card-content>
@@ -48,7 +42,7 @@
 
   <ion-card class="ion-text-center" *ngIf="isUploading && !isUploaded">
     <ion-card-header>
-      <ion-card-title>Selected File:<b>{{ fileName }}</b></ion-card-title>
+      <ion-card-title></ion-card-title>
     </ion-card-header>
 
     <ion-card-content>

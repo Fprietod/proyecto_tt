@@ -1,0 +1,15 @@
+ion-content {
+  --background: url('/assets/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+.container-logo {
+    display: inline-block;
+    width: 100%;
+    margin: 20px 0;
+    img {
+      max-width: 250px;
+    }
+  }
