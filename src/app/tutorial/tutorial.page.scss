@@ -5,10 +5,17 @@ ion-slide {
 }
 
 ion-img{
-	max-width: 80vw;
-	max-height: 80vh;
+	max-width: 49vw;
+	max-height: 49vh;
 }
 
 p{
 	font-size:12px;
+}
+ion-content {
+  --background: url('/assets/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }

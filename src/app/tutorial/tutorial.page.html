@@ -1,13 +1,7 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>tutorial</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
 	 <ion-slides pager="true" [options]="slideOpts">
         <ion-slide class="step-one">
-           <ion-img src="https://fotos-11.s3.amazonaws.com/metrocdmx/Screenshot/Login.PNG"></ion-img>
+           <ion-img src="/assets/capturas/menu-principal.jpg"></ion-img>
           <h1>Login</h1>
           <p> Esta es nuestra pantalla principal, en el cual tenemos nuestro correo electrónico con el cual podemos acceder, si ya tenemos una cuenta. Si no se tiene una, seleccionar el boton "No tengo una cuenta" </p>
           <p> Para acceder con una red social, tiene que darle click al icono de la red social. </p>
@@ -17,25 +11,26 @@
           <ion-button color="dark" (click)="next()">Next</ion-button>
         </ion-slide>
         <ion-slide class="step-two">
-        	<ion-img src="https://fotos-11.s3.amazonaws.com/metrocdmx/Screenshot/Usuario+registrado.PNG"></ion-img>
+        	<ion-img src="/assets/capturas/menu-logeado.jpg"></ion-img>
           <h1>Menú usuario registrado</h1>
-          <p> "Chat estaciones del metro" Si queremos acceder al chat de las estaciones de la línea del metro para comentar y poder comentarios de las estaciones de la línea de metro </p>
+          <p> "Consulta el chat de las líneas del metro" Si queremos acceder al chat de las estaciones de la línea del metro para comentar y observar los comentarios de las estaciones de la línea de metro </p>
 
-          <p> "Información de Twitter" Si desea acceder a la última noticia de la cuenta oficial del metro en esta parte puede verlo. </p>
+          <p> "Consulta la información de Twitter" Si desea acceder a la última noticia de la cuenta oficial del metro en esta parte puede verlo. </p>
 
-          <p> "Encuentrame" Si queremos saber las estaciones cercanas a nosotros, esta sección nos ayuda. </p>
+          <p> "¿Qué estaciones me quedan cerca?" Si queremos saber las estaciones cercanas a nosotros, esta sección nos ayuda. </p>
 
-          <p> "Reportar" En esta sección te permite crear un reporte para alguna estación del metro </p>
+          <p> "Reporta un incidente" En esta sección te permite crear un reporte para alguna estación del metro </p>
 
-          <p> "Ver notificaciones" En esta sección nos permite ver los reportes de los usuarios que han contribuido con un reporte. </p>
+          <p> "Ver notificaciones sobre los reportes" En esta sección nos permite ver los reportes de los usuarios que han contribuido con un reporte. </p>
 
-          <p> "Desconectarse" Con esta sección cierras la sesión </p>
+          <p> "Buscar una estación en particular" Para buscar una estación en especial </p>
+          <p> "Cerrar sesión" Cerramos sesión con la cuenta que iniciamos sesión
 
 
           <ion-button color="dark" (click)="next()">Next</ion-button>
         </ion-slide>
          <ion-slide class="step-three">
-           <ion-img src="https://fotos-11.s3.amazonaws.com/metrocdmx/Screenshot/Chat+de+estaciones.PNG"></ion-img>
+           <ion-img src="/assets/capturas/chat-lineas-metro.jpg"></ion-img>
           <h1>Chat de estaciones</h1>
           <p> En esta sección nos encontramos con el chat
           	de las estaciones del metro donde podrás comentar con otros 
@@ -44,7 +39,7 @@
           <ion-button color="dark" (click)="next()">Next</ion-button>
         </ion-slide>
         <ion-slide class="step-four">
-           <ion-img src="https://fotos-11.s3.amazonaws.com/metrocdmx/Screenshot/Status-chat.PNG"></ion-img>
+           <ion-img src="/assets/capturas/status-chat.jpg"></ion-img>
           <h1>Estatus chat</h1>
           <p> Al abrir el chat podrás observar las conversaciones 
           que los usuarios han tenido sobre las estaciones del metro. </p>
@@ -52,7 +47,7 @@
           <ion-button color="dark" (click)="next()">Next</ion-button>
         </ion-slide>
         <ion-slide class="step-five">
-           <ion-img src="https://fotos-11.s3.amazonaws.com/metrocdmx/Screenshot/Informacion-twitter.PNG"></ion-img>
+           <ion-img src="/assets/capturas/twitter.jpg"></ion-img>
           <h1>Información Twitter</h1>
           <p> En esta sección podras ver el último reporte de la cuenta oficial de twitter, así mismo como el horario del metro, costos, la ruta del metro, además podrás abrir la aplicación para que te dirija a su cuenta oficial. (Necesitas internet para esto) </p>
           <ion-img src="https://fotos-11.s3.amazonaws.com/metrocdmx/Screenshot/informacion-twitter-2.PNG"></ion-img>
@@ -60,7 +55,7 @@
           <ion-button color="dark" (click)="next()">Next</ion-button>
         </ion-slide>
            <ion-slide class="step-six">
-           <ion-img src="https://fotos-11.s3.amazonaws.com/metrocdmx/Screenshot/Reporte-1.PNG"></ion-img>
+           <ion-img src="/assets/capturas/crear-reporte.jpg"></ion-img>
           <h1>Reportar</h1>
           <p> Esta sección se te pedirán los siguientes datos para poder hacer tu reporte: Categoria aquí tienes que especificar el tipo de reporte, Estación: ¿en qué estación ocurrio el percance?
           Usuario: tu nombre de usuario, Fecha, lo dejamos como se encuentra, detalles: escríbimos los detalles del incidente. </p>
@@ -69,7 +64,7 @@
           <ion-button color="dark" (click)="next()">Next</ion-button>
         </ion-slide>
         <ion-slide class="step-seven">
-           <ion-img src="https://fotos-11.s3.amazonaws.com/metrocdmx/Screenshot/Reporte-2.PNG"></ion-img>
+           <ion-img src="/assets/capturas/menu-reportes.jpg"></ion-img>
           <h1>Lista de reportes</h1>
           <p> Esta sección observarás los reportes que has creado cuando estas logueado, de igual manera, si inicias sin iniciar sesión podrás ver los reportes, pero no crear uno. </p>
       
@@ -77,20 +72,19 @@
           <ion-button color="dark" (click)="next()">Next</ion-button>
         </ion-slide>
         <ion-slide class="step-eight">
-           <ion-img src="https://fotos-11.s3.amazonaws.com/metrocdmx/Screenshot/Reporte-2.PNG"></ion-img>
-          <h1>Lista de reportes</h1>
-          <p> Esta sección observarás los reportes que has creado cuando estas logueado, de igual manera, si inicias sin iniciar sesión podrás ver los reportes, pero no crear uno. </p>
+           <ion-img src="/assets/capturas/confirmar-reporte.jpg"></ion-img>
+          <h1>Confirmar un reporte</h1>
+          <p> En esta sección el usuario podrá validar si un reporte es
+          verídico o falso. </p>
       
 
           <ion-button color="dark" (click)="next()">Next</ion-button>
         </ion-slide>
         <ion-slide class="step-nine">
-           <ion-img src="https://fotos-11.s3.amazonaws.com/metrocdmx/Screenshot_2020-11-13-01-57-14-506_com.proyectott.escom.jpg"></ion-img>
+           <ion-img src="/assets/capturas/Google-maps.png"></ion-img>
           <h1>Estaciones cercanas a tu posición</h1>
           <p> En esta sección se encuentran las estaciones más cercanas
           a la posición del usuario y le permite acceder a los reportes </p>
-      
-
           <ion-button color="dark" (click)="next()">Next</ion-button>
         </ion-slide>
         <ion-slide>
