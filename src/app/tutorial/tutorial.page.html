@@ -87,10 +87,31 @@
           a la posición del usuario y le permite acceder a los reportes </p>
           <ion-button color="dark" (click)="next()">Next</ion-button>
         </ion-slide>
-        <ion-slide>
-          <h1>Slide 3</h1>
-          <ion-button (click)="finish()"></ion-button>
+        <ion-slide class="step-ten">
+           <ion-img src="/assets/capturas/barra-busqueda.jpg"></ion-img>
+          <h1>Barra de busqueda</h1>
+          <p> Si deseamos buscar una estación en específico la aplicación incorpora una barra de busqueda. </p>
+          <ion-button color="dark" (click)="next()">Next</ion-button>
         </ion-slide>
+        <ion-slide class="step-eleven">
+           <ion-img src="/assets/capturas/registrar-usuario.jpg"></ion-img>
+          <h1>Registro de un usuario</h1>
+          <p> Si no tenemos una cuenta podemos crear un usuario con el cual podremos iniciar sesión. </p>
+          <ion-button color="dark" (click)="next()">Next</ion-button>
+        </ion-slide>
+        <ion-slide class="step-twelve">
+           <ion-img src="/assets/capturas/menu-sin-registrar.jpg"></ion-img>
+          <h1>Acceso como invitado</h1>
+          <p> Como invitado no podremos crear reportes, pero si validarlos. </p>
+          <ion-button color="dark" (click)="next()">Next</ion-button>
+        </ion-slide>
+        <ion-slide class="step-tirteen">
+           <ion-img src="/assets/capturas/ruta-metro.jpg"></ion-img>
+          <h1>Ruta del metro</h1>
+          <p> En esta sección se te presenta un mapa del metro para que planees tu viaje </p>
+          <ion-button color="dark" (click)="finish()">Next</ion-button>
+        </ion-slide>
+        
       </ion-slides>
 
 </ion-content>
