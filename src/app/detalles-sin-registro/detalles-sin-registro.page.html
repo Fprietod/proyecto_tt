@@ -1,13 +1,7 @@
-<ion-header>
-  <ion-toolbar>
-  	<ion-buttons slot="start">
-  		<ion-back-button></ion-back-button>
-  	</ion-buttons>
-    <ion-title>{{ (reporte | async)?.Categoria}}</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+	<div padding text-center class="container-logo">
+      <img src="assets/logo.png">
+    </div>
 
 	<h3> Categoria </h3>
 	<p> La categoria del reportes es {{(reporte | async)?.Categoria}} , reportado

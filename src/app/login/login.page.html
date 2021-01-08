@@ -1,25 +1,28 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Usuario registrado</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-<img src="{{ photo }}?width=100" alt="">
-<p> Bienvenido a la aplicación  {{name}} </p>
+<div padding text-center class="container-logo">
+      <img src="assets/logo.png">
+    </div>
+
+   
+  <div text-center class="socialLogin" padding> 
+  <ion-button size="small" routerLink="../status-chat">Consulta el chat de las líneas del metro</ion-button>
 
 
-  <ion-button expand="block" routerLink="../status-chat">Chat de estaciones del metro</ion-button>
+  <ion-button  size="small" routerLink="/timeline" color="success">
+  Consulta la información de Twitter </ion-button>
+  <ion-button  size="small" routerLink="/encuentrame" color="success">
+  ¿Qué estaciones me quedan cerca? </ion-button>
+  
+   <ion-button  size="small" routerLink="/reportar" color="success">
+  Reporta un incidente </ion-button>
+  <ion-button  size="small" routerLink="/estado-metro" color="success">
+  Ver notificación sobre los reportes </ion-button>
+  <ion-button  expand="small" routerLink="/reporte-iconos" color="success">
+  Busca una estación en particular </ion-button>
+  <ion-button size="small" (click)="Onlogout()">Cerrar sesión</ion-button>
+      
+</div>
 
-  <ion-button  size="medium" routerLink="/timeline" color="success">
-  Información de twitter </ion-button>
-  <ion-button  size="medium" routerLink="/encuentrame" color="success">
-  Encuentrame </ion-button>
-  <ion-button expand="block" (click)="Onlogout()">Desconectarse</ion-button>
-   <ion-button  size="medium" routerLink="/reportar" color="success">
-  Reportar </ion-button>
-  <ion-button  size="medium" routerLink="/estado-metro" color="success">
-  Ver notificaciones </ion-button>
-  <ion-button  size="medium" routerLink="/reporte-iconos" color="success">
-  Lista metro </ion-button>
+
+
 </ion-content>
