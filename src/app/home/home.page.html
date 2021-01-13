@@ -28,10 +28,17 @@
     <ion-label positions="floating"> Contraseña </ion-label>
     <ion-input [(ngModel)]="password" type="password" name="password"></ion-input>
   </ion-item>
+  
 </ion-list>
   <br>
   <ion-button (click)="onSubmitLogin()" expand="block"ion-button full color="dark">Entrar</ion-button>
+  
+
+
 </div>
+ <div class="ion-text-center ion-margin-top">
+    <a routerLink="/reset-pass"><small>Olvidé mi Contraseña</small></a>
+  </div>
   <div class="sepretor-or" padding-horizontal> <p>Or</p></div>
   <ion-grid>
     <ion-row>
@@ -60,6 +67,12 @@
     <div padding text-center class="form-bottom-text">
    <ion-button color="medium" expand="block" routerLink="../sin-registro">Acceder sin registrarme</ion-button>
  </div>
+  <ion-item lines="full" (click)="openTwitter('MetroCDMX')">
+    <ion-icon name="logo-twitter" slot="start" color="secondary"></ion-icon>
+    MetroCDMX
+    <br>
+  
+  </ion-item>
 
  
   

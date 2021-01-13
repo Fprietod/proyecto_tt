@@ -22,7 +22,7 @@ ionic cordova plugin add cordova-plugin-googleplus --save --variable REVERSED_CL
 cordova plugin add cordova-plugin-googleplus --save --variable REVERSED_CLIENT_ID=20781833160-ov5fnunhjldgrak485eiivtt32ubis7p.apps.googleusercontent.com --variable WEB_APPLICATION_CLIENT_ID=920781833160-ov5fnunhjldgrak485eiivtt32ubis7p.apps.googleusercontent.com
 
 
-ionic cordova build --release android
+ionic cordova build --release ios
 
 https://leetcode.com/discuss/interview-question/428240/Audible-Onlie-Assessment-for-New-Graduate-Number-of-characters-escaped
 
