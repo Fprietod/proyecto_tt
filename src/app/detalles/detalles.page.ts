@@ -68,7 +68,7 @@ export class DetallesPage implements OnInit {
 
   deleteReport(){
   this.firestoreService.deleteReport(this.reportId).then(() =>{
-  this.router.navigateByUrl('/estado-metro')
+  this.router.navigate(['home'])
   });
   }
 

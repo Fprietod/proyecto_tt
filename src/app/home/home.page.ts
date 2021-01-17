@@ -30,6 +30,15 @@ export class HomePage {
   }
 
 
+  ngOnInit() {
+
+    this.fcm.getToken().then(token => {
+    console.log(token)
+                                      });
+  
+  }
+
+
   loginGoogle(){
   this.authService.loginWithGoogle().then(() => {
   this.router.navigate(['/login']);

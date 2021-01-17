@@ -22,7 +22,7 @@ ionic cordova plugin add cordova-plugin-googleplus --save --variable REVERSED_CL
 cordova plugin add cordova-plugin-googleplus --save --variable REVERSED_CLIENT_ID=20781833160-ov5fnunhjldgrak485eiivtt32ubis7p.apps.googleusercontent.com --variable WEB_APPLICATION_CLIENT_ID=920781833160-ov5fnunhjldgrak485eiivtt32ubis7p.apps.googleusercontent.com
 
 
-ionic cordova build --release ios
+ionic cordova build --release android
 
 https://leetcode.com/discuss/interview-question/428240/Audible-Onlie-Assessment-for-New-Graduate-Number-of-characters-escaped
 
@@ -31,4 +31,5 @@ https://jsmobiledev.com/article/crud-ionic-firestore
 
 http://atracciondetalento.net/DELOITTE/web/asp/modAcceso/salida.aspx?session=end
 oscarsuarez2021@outlook.com
+am.azonfree2022@gmail.com
 https://offer.tidal.com/voucher?code=WL25BAEN6X
