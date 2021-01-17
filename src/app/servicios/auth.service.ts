@@ -95,6 +95,10 @@ export class AuthService {
   return this.AFauth.authState
   }
 
+  resetPassword(email:string){
+  return this.AFauth.sendPasswordResetEmail(email);
+  }
+
 }
 
 

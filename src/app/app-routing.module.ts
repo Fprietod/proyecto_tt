@@ -70,7 +70,11 @@ const routes: Routes = [
   {
     path: 'tutorial',
     loadChildren: () => import('./tutorial/tutorial.module').then( m => m.TutorialPageModule)
+  },  {
+    path: 'reset-pass',
+    loadChildren: () => import('./reset-pass/reset-pass.module').then( m => m.ResetPassPageModule)
   },
+
 
 
 

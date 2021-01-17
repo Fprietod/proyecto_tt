@@ -75,6 +75,7 @@ public date = new Date();
   this.firestoreservice.
   createReport(Categoria, Estacion, Usuario, Fecha, DetallesIncidente, Sugerencia).then(() =>{
   loading.dismiss().then(() => {
+  alert('El reporte se ha enviado correctamente')
   this.router.navigateByUrl('/estado-metro')
   });
   },
